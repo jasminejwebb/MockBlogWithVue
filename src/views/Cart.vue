@@ -20,16 +20,16 @@
 
 <script>
 export default {
-  name: 'ProductList',
-  props: {
-    products: Array
+  name: 'Browse',
+  components: {
+    ProductList
   },
-  methods: {
-    addToCart(product) {
-      this.$root.$data.cart.push(product);
+  computed: {
+    products() {
+      return this.$root.$data.cart;
     }
-  }
-}
+  },
+} 
 </script>
 
 <style scoped>
