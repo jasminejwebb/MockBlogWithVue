@@ -11,20 +11,10 @@ export default {
   components: {
     ProductList
   },
-  data() {
-    return {
-      country: '',
-    }
-  },
   computed: {
     products() {
-      return this.$root.$data.products.filter(product => product.country === this.country);
+      return this.$root.$data.cart;
     }
   },
-  methods: {
-    select(country) {
-      this.country = country;
-    }
-  }
 }
 </script>
