@@ -11,7 +11,7 @@
       </div>
       <div class="price">
         <h2>{{product.price}}</h2>
-        <button class="auto">Add to Cart</button>
+        <button @click="addToCart(product)" class="auto">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -23,6 +23,11 @@ export default {
   name: 'ProductList',
   props: {
     products: Array
+  },
+  methods: {
+    addToCart(product) {
+      this.$root.$data.cart.push(product);
+    }
   }
 }
 </script>

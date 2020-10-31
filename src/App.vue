@@ -16,7 +16,7 @@
       <router-link to="/cart">
         <div class="menu-item">
           <img src="/images/love.png">
-          <p>0 items</p>
+          <p>{{numberOfItems}}</p>
         </div>
       </router-link>
     </div>
@@ -24,6 +24,17 @@
   <router-view />
 </div>
 </template>
+
+<script>
+export default {
+  name: 'app',
+  methods: {
+    numberOfItems() {
+      this.$root.$data.cart.length;
+    }
+  }
+}
+</script>
 
 <style>
 * {
