@@ -52,6 +52,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 50px 100px;
 }
 
 .products {
@@ -61,14 +62,17 @@ export default {
   justify-content: space-around;
 }
 
-.product{
+.product {
   margin: 10px;
-  margin-top: 25;
+  margin-top: 50px;
+  width: 200px;
+}
+
+.product img {
+  border: 2px solid #333;
+  height: 250px;
   width: 200px;
   object-fit: cover;
-}
-.quantity{
-    text-align: center;
 }
 
 .product .image {
