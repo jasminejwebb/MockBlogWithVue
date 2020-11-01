@@ -1,26 +1,13 @@
 <template>
-<div class="wrapper">
-  <div class="products">
-    <div class="product" v-for="product in cart" :key="product.id">
-      <div class="info">
-        <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
-      </div>
-      <div class="image">
-        <img :src="'/images/products/'+product.image">
-      </div>
-      <div class="price">
-        <h2>{{product.price}}</h2>
-        <button @click="addToCart(product)" class="auto">Add to Cart</button>
-      </div>
-    </div>
-  </div>
+<div>
+  <ProductList :products="products" />
 </div>
 </template>
 
 <script>
+import ProductList from "../components/ProductList.vue"
 export default {
-  name: 'Browse',
+  name: 'Cart',
   components: {
     ProductList
   },

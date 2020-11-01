@@ -28,9 +28,9 @@
 <script>
 export default {
   name: 'app',
-  methods: {
+  computed: {
     numberOfItems() {
-      this.$root.$data.cart.length;
+      return this.$root.$data.cart.length;
     }
   }
 }
