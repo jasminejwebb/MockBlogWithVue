@@ -1,19 +1,37 @@
 <template>
 <div>
-  <ProductList :products="products" />
+  <CartList :products="products" />
+  <h1 class = "empty">{{getCart}}</h1>
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import CartList from "../components/CartList.vue"
 export default {
   name: 'Cart',
   components: {
-    ProductList
+    CartList
   },
   computed: {
     products() {
       return this.$root.$data.cart;
+    },
+    getCart() {
+      let message = "Test"; 
+      let total = Number(0); 
+
+      if(this.$root.$data.cart.length == 0)
+      {
+        message = "The cart is empty."
+      }
+      else{
+        for(let item of this.$root.$data.cart)
+        {
+          total = (total + item.price*item.quantity).toFixed(2); 
+        }
+        message = total; 
+      }
+      return message; 
     }
   },
 } 
@@ -75,6 +93,10 @@ export default {
 
 .price {
   display: flex;
+}
+
+.empty{
+  text-align: center;
 }
 
 button {

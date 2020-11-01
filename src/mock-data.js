@@ -1,357 +1,405 @@
 let mock = [{
             id: 1,
             name: "Egg Salad",
-            price: "$5.62",
+            price: "5.62",
             country: "United States",
-            image: 'egg-salad.jpg'
+            image: 'egg-salad.jpg',
+            quantity: 0 
       },
       {
             id: 2,
             name: "Sweet Potato",
-            price: "$2.41",
+            price: "2.41",
             country: "Brazil",
-            image: "sweet-potato.jpg"
+            image: "sweet-potato.jpg",
+            quantity: 0 
       },
       {
             id: 3,
             name: "Foccacia Bread",
-            price: "$5.92",
+            price: "5.92",
             country: "United States",
-            image: 'focaccia.jpg'
+            image: 'focaccia.jpg',
+            quantity: 0 
       },
       {
             id: 4,
             name: "Canned Lotus Rootlets",
-            price: "$3.58",
+            price: "3.58",
             country: "United States",
-            image: 'lotus-rootlets.jpg'
+            image: 'lotus-rootlets.jpg',
+            quantity: 0 
       },
       {
             id: 5,
             name: "Frilled Toothpicks",
-            price: "$2.47",
+            price: "2.47",
             country: "Canada",
-            image: 'toothpicks.jpg'
-
+            image: 'toothpicks.jpg',
+            quantity: 0 
       },
       {
             id: 6,
             name: "Rubbed Sage",
-            price: "$8.77",
+            price: "8.77",
             country: "Brazil",
-            image: 'sage-rubbed.jpg'
+            image: 'sage-rubbed.jpg',
+            quantity: 0 
       },
       {
             id: 7,
             name: "Langers Mango Nectar",
-            price: "$9.24",
+            price: "9.24",
             country: "Brazil",
-            image: 'mango-nectar.jpg'
+            image: 'mango-nectar.jpg',
+            quantity: 0 
       },
       {
             id: 8,
             name: "Cucumber",
-            price: "$3.02",
+            price: "3.02",
             country: "Canada",
-            image: 'cucumber.jpg'
+            image: 'cucumber.jpg',
+            quantity: 0 
       },
       {
             id: 9,
             name: "Fava Beans",
-            price: "$4.76",
+            price: "4.76",
             country: "Brazil",
-            image: 'fava-beans.jpg'
-
+            image: 'fava-beans.jpg',
+            quantity: 0 
       },
       {
             id: 10,
             name: "Coconut",
-            price: "$2.50",
+            price: "2.50",
             country: "Brazil",
-            image: 'coconut.jpg'
+            image: 'coconut.jpg',
+            quantity: 0 
       },
       {
             id: 11,
             name: "Kettle Potato Chips",
-            price: "$6.70",
+            price: "6.70",
             country: "United States",
-            image: "potato-chips.jpg"
+            image: "potato-chips.jpg",
+            quantity: 0 
       },
       {
             id: 12,
             name: "Flour - Rye",
-            price: "$1.14",
+            price: "1.14",
             country: "Canada",
-            image: "rye-flour.jpg"
+            image: "rye-flour.jpg",
+            quantity: 0 
       },
       {
             id: 13,
             name: "Feta Chees",
-            price: "$6.92",
+            price: "6.92",
             country: "Brazil",
-            image: "feta-cheese.jpg"
+            image: "feta-cheese.jpg",
+            quantity: 0 
       },
       {
             id: 14,
             name: "Cheddar Cheese",
-            price: "$5.36",
+            price: "5.36",
             country: "Mexico",
-            image: "cheddar-cheese.jpg"
+            image: "cheddar-cheese.jpg",
+      quantity: 0 
       },
       {
             id: 15,
             name: "Capers",
-            price: "$4.18",
+            price: "4.18",
             country: "United States",
-            image: "capers.jpg"
+            image: "capers.jpg",
+      quantity: 0 
       },
       {
             id: 16,
             name: "Baguette",
-            price: "$9.18",
+            price: "9.18",
             country: "Mexico",
-            image: "baguette.jpg"
+            image: "baguette.jpg",
+      quantity: 0 
       },
       {
             id: 17,
             name: "Lasagna Noodles",
-            price: "$4.73",
+            price: "4.73",
             country: "Brazil",
-            image: "lasagna-pasta.jpg"
+            image: "lasagna-pasta.jpg",
+      quantity: 0 
       },
       {
             id: 18,
             name: "Pied De Vents Cheese",
-            price: "$5.16",
+            price: "5.16",
             country: "Canada",
-            image: "pied-de-vents.jpg"
+            image: "pied-de-vents.jpg",
+      quantity: 0 
       },
       {
             id: 19,
             name: "Sweet Potato Crackers",
-            price: "$6.81",
+            price: "6.81",
             country: "United States",
-            image: "crackers.jpg"
+            image: "crackers.jpg",
+      quantity: 0 
       },
       {
             id: 20,
             name: "Mushrooms",
-            price: "$8.62",
+            price: "8.62",
             country: "United States",
-            image: "mushrooms.jpg"
+            image: "mushrooms.jpg",
+      quantity: 0 
       },
       {
             id: 21,
             name: "Jerusalem Artichoke",
-            price: "$3.16",
+            price: "3.16",
             country: "United States",
-            image: "jerusalem-artichoke.jpg"
+            image: "jerusalem-artichoke.jpg",
+      quantity: 0 
       },
       {
             id: 22,
             name: "Leather Leaf Fern",
-            price: "$9.41",
+            price: "9.41",
             country: "Brazil",
-            image: "leather-leaf.jpg"
+            image: "leather-leaf.jpg",
+      quantity: 0 
       },
       {
             id: 23,
             name: "Dried Apricots",
-            price: "$7.42",
+            price: "7.42",
             country: "Brazil",
-            image: "dried-apricots.jpg"
+            image: "dried-apricots.jpg",
+      quantity: 0 
       },
       {
             id: 24,
             name: "Navel Orange",
-            price: "$3.53",
+            price: "3.53",
             country: "Brazil",
-            image: "navel-orange.jpg"
+            image: "navel-orange.jpg",
+      quantity: 0 
       },
       {
             id: 25,
             name: "Sunflower Oil",
-            price: "$1.90",
+            price: "1.90",
             country: "Mexico",
-            image: "sunflower-oil.jpg"
+            image: "sunflower-oil.jpg",
+      quantity: 0 
       },
       {
             id: 26,
             name: "Black Turtle Beans",
-            price: "$4.67",
+            price: "4.67",
             country: "Canada",
-            image: "turtle-beans.jpg"
+            image: "turtle-beans.jpg",
+      quantity: 0 
       },
       {
             id: 27,
             name: "Bananas",
-            price: "$2.64",
+            price: "2.64",
             country: "Canada",
             image: "bananas.jpg"
-
+,
+      quantity: 0 
       },
       {
             id: 28,
             name: "Salami",
-            price: "$8.72",
+            price: "8.72",
             country: "Brazil",
-            image: "salami.jpg"
+            image: "salami.jpg",
+      quantity: 0 
       },
       {
             id: 29,
             name: "Proscuitto",
-            price: "$9.86",
+            price: "9.86",
             country: "Brazil",
-            image: "proscuitto.jpg"
+            image: "proscuitto.jpg",
+      quantity: 0 
       },
       {
             id: 30,
             name: "Cranberries",
-            price: "$5.85",
+            price: "5.85",
             country: "United States",
             image: "cranberries.jpg"
-
+,
+      quantity: 0 
       },
       {
             id: 31,
             name: "Canteloupe",
-            price: "$4.49",
+            price: "4.49",
             country: "United States",
-            image: "canteloupe.jpg"
+            image: "canteloupe.jpg",
+      quantity: 0 
       },
       {
             id: 32,
             name: "Lemon",
-            price: "$2.8Lemon5",
+            price: "2.8Lemon5",
             country: "United States",
-            image: "lemon.jpg"
+            image: "lemon.jpg",
+      quantity: 0 
       },
       {
             id: 33,
             name: "Pesto",
-            price: "$2.67",
+            price: "2.67",
             country: "Brazil",
-            image: "pesto.jpg"
+            image: "pesto.jpg",
+      quantity: 0 
       },
       {
             id: 34,
             name: "Grapefruit Juice",
-            price: "$4.88",
+            price: "4.88",
             country: "Brazil",
             image: "grapefruit-juice.jpg"
-
+,
+      quantity: 0 
       },
       {
             id: 35,
             name: "Curry Paste",
-            price: "$2.02",
+            price: "2.02",
             country: "Brazil",
-            image: "curry-paste.jpg"
+            image: "curry-paste.jpg",
+      quantity: 0 
       },
       {
             id: 36,
             name: "Avocado Oil",
-            price: "$4.45",
+            price: "4.45",
             country: "Canada",
-            image: "avocado-oil.jpg"
+            image: "avocado-oil.jpg",
+      quantity: 0 
       },
       {
             id: 37,
             name: "Queso Fresco",
-            price: "$9.24",
+            price: "9.24",
             country: "Canada",
-            image: "queso-fresco.jpg"
+            image: "queso-fresco.jpg",
+      quantity: 0 
       },
       {
             id: 38,
             name: "Key Lime Pie",
-            price: "$5.32",
+            price: "5.32",
             country: "Mexico",
-            image: "key-lime-pie.jpg"
+            image: "key-lime-pie.jpg",
+      quantity: 0 
       },
       {
             id: 39,
             name: "Granny Smith Apple",
-            price: "$2.12",
+            price: "2.12",
             country: "United States",
-            image: "granny-smith.jpg"
+            image: "granny-smith.jpg",
+      quantity: 0 
       },
       {
             id: 40,
             name: "Morning Glory Muffin Mix",
-            price: "$9.22",
+            price: "9.22",
             country: "Brazil",
-            image: "muffin-mix.jpg"
+            image: "muffin-mix.jpg",
+      quantity: 0 
       },
       {
             id: 41,
             name: "Heavy Whipping Cream",
-            price: "$8.78",
+            price: "8.78",
             country: "Brazil",
-            image: 'heavy-cream.jpg'
+            image: 'heavy-cream.jpg',
+      quantity: 0 
       },
       {
             id: 42,
             name: "Red Bell Pepper",
-            price: "$9.03",
+            price: "9.03",
             country: "Brazil",
-            image: 'red-bell-pepper.jpg'
+            image: 'red-bell-pepper.jpg',
+      quantity: 0 
       },
       {
             id: 43,
             name: "Perrier",
-            price: "$9.36",
+            price: "9.36",
             country: "United States",
-            image: 'perrier.jpg'
+            image: 'perrier.jpg',
+      quantity: 0 
       },
       {
             id: 44,
             name: "Yukon Gold Potatoes",
-            price: "$8.76",
+            price: "8.76",
             country: "Mexico",
-            image: 'yukon-potatoes.jpg'
+            image: 'yukon-potatoes.jpg',
+      quantity: 0 
       },
       {
             id: 45,
             name: "Salmon Fillets",
-            price: "$6.21",
+            price: "6.21",
             country: "United States",
-            image: 'salmon-fillets.jpg'
+            image: 'salmon-fillets.jpg',
+      quantity: 0 
       },
       {
             id: 46,
             name: "Tilapia Fillets",
-            price: "$4.37",
+            price: "4.37",
             country: "Mexico",
-            image: 'tilapia.jpg'
+            image: 'tilapia.jpg',
+      quantity: 0 
       },
       {
             id: 47,
             name: "Tomato Pesto",
-            price: "$9.70",
+            price: "9.70",
             country: "Brazil",
-            image: 'tomato-pesto.jpg'
+            image: 'tomato-pesto.jpg',
+      quantity: 0 
       },
       {
             id: 48,
             name: "Oil - Olive Bertolli",
-            price: "$8.92",
+            price: "8.92",
             country: "Brazil",
-            image: 'olive-oil.jpg'
+            image: 'olive-oil.jpg',
+      quantity: 0 
       },
       {
             id: 49,
             name: "Tear Drop Yellow Tomatoes",
-            price: "$3.32",
+            price: "3.32",
             country: "Mexico",
-            image: 'yellow-tomatoes.jpg'
+            image: 'yellow-tomatoes.jpg',
+      quantity: 0 
       },
       {
             id: 50,
             name: "Smoked Paprika",
-            price: "$8.31",
+            price: "8.31",
             country: "Brazil",
-            image: 'smoked-paprika.jpg'
+            image: 'smoked-paprika.jpg',
+      quantity: 0 
       }
 ]
 

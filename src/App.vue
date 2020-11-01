@@ -30,7 +30,12 @@ export default {
   name: 'app',
   computed: {
     numberOfItems() {
-      return this.$root.$data.cart.length;
+      let numItems = 0; 
+      for(let item of this.$root.$data.cart)
+      {
+        numItems += item.quantity;  
+      }
+      return numItems;
     }
   }
 }

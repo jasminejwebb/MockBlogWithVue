@@ -13,6 +13,9 @@
         <h2>${{product.price}}</h2>
         <button @click="addToCart(product)" class="auto">Add to Cart</button>
       </div>
+      <div class = "quantity">
+        <h3>Quantity in cart: {{product.quantity}}</h3>
+      </div>
     </div>
   </div>
 </div>
@@ -20,7 +23,7 @@
 
 <script>
 export default {
-  name: 'ProductList',
+  name: 'CartList',
   props: {
     products: Array
   },
@@ -37,7 +40,6 @@ export default {
       }
       if(!temp)
       {
-        product.quantity = 1; 
         this.$root.$data.cart.push(product);
       }
     }
