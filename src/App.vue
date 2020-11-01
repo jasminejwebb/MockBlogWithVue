@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <app-header>
   <div id="menu">
     <div id="brand">
       <router-link to="/">
@@ -21,7 +22,17 @@
       </router-link>
     </div>
   </div>
-  <router-view />
+  </app-header>
+  <router-view></router-view>
+  <app-footer>
+    
+    <footer class = "footer">
+        <div>Created By: Jasmine Webb</div>
+        <div>
+          <a class="source-link" href="https://github.com/BYU-CS-260-Winter-2020/lab-3b-grocery-store-jasminejwebb">GitHub Repository</a>
+        </div>
+    </footer>
+  </app-footer>
 </div>
 </template>
 
@@ -44,11 +55,6 @@ export default {
 <style>
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 50px 100px;
-
 }
 
 #menu {
@@ -94,5 +100,18 @@ body {
 
 .browse {
   margin-right: 50px;
+}
+
+.footer {
+    background-color: #F2921D;
+    border-top: 1px black;
+    margin: 0px 0px;
+    margin-bottom: 0;
+    display: flex; 
+    justify-content: space-between;
+}
+.footer > div {
+  margin: .5em; 
+  padding: auto; 
 }
 </style>

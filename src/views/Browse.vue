@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="pure-menu pure-menu-horizontal">
+  <div class="pure-menu pure-menu-horizontal subheader">
     <ul class="pure-menu-list">
       <li class="pure-menu-item"><a @click="select('United States')" href="#" class="pure-menu-link">United States</a></li>
       <li class="pure-menu-item"><a @click="select('Canada')" href="#" class="pure-menu-link">Canada</a></li>
@@ -8,7 +8,9 @@
       <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
     </ul>
   </div>
-  <ProductList :products="products" />
+  <div class = wrapper>
+    <ProductList :products="products" />
+  </div>
 </div>
 </template>
 
@@ -36,3 +38,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.subheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  min-height: 55vh;
+}
+</style>

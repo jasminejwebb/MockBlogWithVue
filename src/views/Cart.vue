@@ -1,7 +1,8 @@
 <template>
 <div>
+  <h1 class = "message">{{getCart}}</h1>
   <CartList :products="products" />
-  <h1 class = "empty">{{getCart}}</h1>
+  <h1 class = "message">{{getCost}} </h1>
 </div>
 </template>
 
@@ -17,19 +18,24 @@ export default {
       return this.$root.$data.cart;
     },
     getCart() {
-      let message = "Test"; 
-      let total = Number(0); 
-
+      let message = ""; 
       if(this.$root.$data.cart.length == 0)
       {
         message = "The cart is empty."
       }
-      else{
+      return message; 
+    },
+    getCost() {
+      let message = ""; 
+
+      if(this.$root.$data.cart.length != 0)
+      {
+        let total = Number(0); 
         for(let item of this.$root.$data.cart)
         {
-          total = (total + item.price*item.quantity).toFixed(2); 
+          total = (total + item.price*item.quantity); 
         }
-        message = total; 
+        message = "Total: $" + total.toFixed(2); 
       }
       return message; 
     }
@@ -41,9 +47,13 @@ export default {
 .wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  min-height: 55vh;
 }
 
+.style{
+  justify-content: center;
+
+}
 .products {
   margin-top: 20px;
   display: flex;
@@ -95,8 +105,10 @@ export default {
   display: flex;
 }
 
-.empty{
+.message{
   text-align: center;
+  display:flex; 
+  justify-content: center;
 }
 
 button {

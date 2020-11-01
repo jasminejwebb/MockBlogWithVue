@@ -32,6 +32,7 @@ export default {
 </script>
 <style scoped>
 .wrapper {
+  margin: 50px 100px;
   display: flex;
   align-items: center;
   justify-content: center;

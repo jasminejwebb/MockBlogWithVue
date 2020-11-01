@@ -61,17 +61,14 @@ export default {
   justify-content: space-around;
 }
 
-.product {
+.product{
   margin: 10px;
-  margin-top: 50px;
-  width: 200px;
-}
-
-.product img {
-  border: 2px solid #333;
-  height: 250px;
+  margin-top: 25;
   width: 200px;
   object-fit: cover;
+}
+.quantity{
+    text-align: center;
 }
 
 .product .image {
