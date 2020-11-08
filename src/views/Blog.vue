@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import ProductList from "../components/BlogList.vue"
 export default {
-  name: 'Browse',
+  name: 'BlogList',
   components: {
     ProductList
   },
