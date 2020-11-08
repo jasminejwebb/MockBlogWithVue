@@ -1,16 +1,20 @@
 <template>
 <div class="wrapper">
   <div class="products">
-    <div class="product" v-for="post in posts" :key="post.title">
+    <div class="product" v-for="recipe in recipes" :key="recipe.name">
       <div class="info">
-        <h1>{{post.title}}</h1>
-        <h2>{{post.author}}</h2>
+        <h1>{{recipe.title}}</h1>
       </div>
       <div class="post">
-        <h3>{{post.tldr}}</h3>
+        <h3>{{recipe.tldr}}</h3>
       </div>
       <div class = "post">
-        <p>{{post.post}}</p>
+        <ul>
+          <div v-for="ingredient in recipe.ingredients" :key="ingredient" class = "ingredients"><li>{{ingredient}}</li></div>
+        </ul>
+        <ol>
+          <div v-for="instructions in recipe.instructions" :key="instructions" class = "ingredients"><li>{{instructions}}</li></div>
+        </ol>
       </div>
     </div>
   </div>
@@ -19,18 +23,19 @@
 
 <script>
 export default {
-  name: 'BlogList',
+  name: 'RecipeList',
   props: {
-    posts: Array
-  }
+    recipes: Array
+  },
+
 }
 </script>
 
 <style scoped>
 .wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   margin: 50px 100px;
 }
 
@@ -63,7 +68,6 @@ export default {
   background: #06174e;
   color: #ffffff;
   padding: 10px 30px;
-  height: 5em;
 }
 
 .info h1 {
@@ -77,11 +81,14 @@ export default {
 }
 .post h3 {
   font-size: 1em;
-  text-align: center;
+  text-align: left;
   font-style: italic;
   padding: 1em;
 }
-
+.post ul, 
+.post ol {
+  margin: 5%;
+}
 .info p {
   margin: 0px;
   font-size: 10px;

@@ -1,41 +1,29 @@
 <template>
 <div>
   <div class="wrapper">
-    <div class="search">
-      <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
-      </form>
-    </div>
+    <div class="circle">Welcome</div>
   </div>
-  <ProductList :products="products" />
+  <div class = "body"> 
+    <br><br>
+    <p>Hello, this is an attempt at a blog. </p>
+    <p>There is still a lot of work to be done, but thanks for joining us. </p>
+    <p>Please check out the blog and recipes!</p>
+  </div>
 </div>
 </template>
 
-<script>
-import ProductList from "../components/ProductList.vue"
-export default {
-  name: 'Home',
-  components: {
-    ProductList
-  },
-  data() {
-    return {
-      searchText: '',
-    }
-  },
-  computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText) >= 0);
-    }
-  },
-}
-</script>
 <style scoped>
 .wrapper {
   margin: 50px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.body {
+  margin: 50px 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .search {
@@ -62,5 +50,16 @@ input {
   box-shadow: none !important;
   width: 100%;
   height: 40px;
+}
+.circle {
+  width: 7em;
+  height: 7em;
+  line-height: 7em;
+  border-radius: 50%;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  background: #06174e;
+  font-style: italic;
 }
 </style>

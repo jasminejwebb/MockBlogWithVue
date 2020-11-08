@@ -1,54 +1,70 @@
 <template>
 <div>
-  <div class="pure-menu pure-menu-horizontal subheader">
-    <ul class="pure-menu-list">
-      <li class="pure-menu-item"><a @click="select('United States')" href="#" class="pure-menu-link">United States</a></li>
-      <li class="pure-menu-item"><a @click="select('Canada')" href="#" class="pure-menu-link">Canada</a></li>
-      <li class="pure-menu-item"><a @click="select('Mexico')" href="#" class="pure-menu-link">Mexico</a></li>
-      <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
-    </ul>
+  <div class="wrapper">
+    <div class="circle">Blog</div>
   </div>
-  <div class = wrapper>
-    <ProductList :products="products" />
-  </div>
+  <BlogList :posts="posts" />
 </div>
 </template>
 
 <script>
-import ProductList from "../components/BlogList.vue"
+import BlogList from "../components/BlogList.vue"
 export default {
-  name: 'BlogList',
+  name: 'Blog',
   components: {
-    ProductList
-  },
-  data() {
-    return {
-      country: '',
-    }
+    BlogList
   },
   computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.country === this.country);
+    posts() {
+      return this.$root.$data.posts;
     }
   },
-  methods: {
-    select(country) {
-      this.country = country;
-    }
-  }
+
 }
 </script>
-
 <style scoped>
-.subheader {
+.wrapper {
+  margin: 50px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.wrapper {
-  min-height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.search {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+}
+
+form {
+  display: table;
+  width: 100%;
+}
+
+i {
+  display: table-cell;
+  padding-left: 10px;
+  width: 1px;
+}
+
+input {
+  display: table-cell;
+  font-size: 20px;
+  border: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  height: 40px;
+  
+}
+.circle {
+  width: 7em;
+  height: 7em;
+  line-height: 7em;
+  border-radius: 50%;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  background: #06174e;
+  font-style: italic;
 }
 </style>

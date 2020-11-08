@@ -1,33 +1,25 @@
 <template>
 <div>
   <div class="wrapper">
-    <div class="search">
-      <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
-      </form>
-    </div>
+    <div class="circle">Recipes</div>
   </div>
-  <ProductList :products="products" />
+  <RecipeList :recipes="recipes" />
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import RecipeList from "../components/RecipeList.vue"
 export default {
-  name: 'Home',
+  name: 'Recipes',
   components: {
-    ProductList
-  },
-  data() {
-    return {
-      searchText: '',
-    }
+    RecipeList
   },
   computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText) >= 0);
+    recipes() {
+      return this.$root.$data.recipes; 
     }
   },
+
 }
 </script>
 <style scoped>
@@ -62,5 +54,16 @@ input {
   box-shadow: none !important;
   width: 100%;
   height: 40px;
+}
+.circle {
+  width: 7em;
+  height: 7em;
+  line-height: 7em;
+  border-radius: 50%;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  background: #06174e;
+  font-style: italic;
 }
 </style>

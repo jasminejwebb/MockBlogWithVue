@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import post from './posts.js'
+import posts from './posts.js'
+import recipes from './recipes.js'
 
 Vue.config.productionTip = false
 
 let data = {
-    products: post,
+    posts: posts,
+    recipes: recipes,
 }
 
 new Vue({
