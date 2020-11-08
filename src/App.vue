@@ -34,7 +34,7 @@
     <footer class = "footer">
         <div>Created By: Jasmine Webb</div>
         <div>
-          <a class="source-link" href="https://github.com/BYU-CS-260-Winter-2020/lab-3b-grocery-store-jasminejwebb">GitHub Repository</a>
+          <a class="source-link" href="https://github.com/jasminejwebb/MockBlogWithVue">GitHub Repository</a>
         </div>
     </footer>
   </app-footer>
